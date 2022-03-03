@@ -20,5 +20,5 @@ The strength metric is calculated by dividing the starting strength by 12, which
 for the minimum strength as described in CAPR 39-3.
 
 The final result is then standardized using the distribution of the scores to have a mean of 1
-and standard deviation of 1. Note that this does mean that units with no strength will not
+and standard deviation of 1.
 }
