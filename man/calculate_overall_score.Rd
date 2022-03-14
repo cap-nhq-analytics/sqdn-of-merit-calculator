@@ -6,7 +6,7 @@
 \usage{
 calculate_overall_score(
   som_report_path,
-  metric_weights = c(strength = 1, growth = 1, achv = 1, enc = 1, flight = 1),
+  score_weights = c(strength = 1, growth = 1, achv = 1, enc = 1, flight = 1),
   growth_focus_area = "balanced",
   achv_award_weights = c(1, 2, 2, 3, 3)
 )
@@ -14,22 +14,22 @@ calculate_overall_score(
 \arguments{
 \item{som_report_path}{A path to the Squadron of Merit Listing report in CSV format.}
 
-\item{metric_weights}{Weights for the five metrics.}
+\item{score_weights}{Weights for the five component scores.}
 
 \item{growth_focus_area}{The focus area for growth scoring, which defaults to "balanced".}
 
 \item{achv_award_weights}{Weights for the major cadet awards, from Wright Brothers to Spaatz.}
 }
 \value{
-A data.table containing unit charter number, the metric scores, and the overall score.
+A data.table containing unit charter number, the component scores, and the overall score.
 }
 \description{
 Calculate the overall score for all units in a Squadron of Merit Listing.
 }
 \details{
-Each of the metric scores are calculated and a total score is obtained by weighting these scores
-equally. If you want to change the weights, pass a named vector to \code{metric_weights}.
+Each of the component scores are calculated and a total score is obtained by weighting these
+scores equally. If you want to change the weights, pass a named vector to \code{score_weights}.
 
 You can pass a different growth focus area through using \code{growth_focus_area}. Similarly, you can
-pass a different set of award weights to the achievement meetric using \code{achv_award_weights}.
+pass a different set of award weights to the achievement score using \code{achv_award_weights}.
 }
