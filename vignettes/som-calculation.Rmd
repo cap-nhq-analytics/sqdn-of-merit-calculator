@@ -1,11 +1,12 @@
 ---
 title: "Calculating Squadron of Merit Rankings"
+date: "`r Sys.Date()`"
 output:
   rmarkdown::html_vignette:
     toc: true
     toc_depth: 2
 vignette: >
-  %\VignetteIndexEntry{som-calculation}
+  %\VignetteIndexEntry{Calculating Squadron of Merit Rankings}
   %\VignetteEngine{knitr::rmarkdown}
   %\VignetteEncoding{UTF-8}
 ---
