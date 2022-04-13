@@ -1,7 +1,7 @@
-#' @title Calculate the Growth Metric
-#' @description Calculate the growth metric for all units in a Squadron of Merit Listing.
+#' @title Calculate the Growth Score
+#' @description Calculate the growth score for all units in a Squadron of Merit Listing.
 #' @details
-#' The default growth metric is calculated by awarding 2 points for every cadet who joins or renews,
+#' The default growth score is calculated by awarding 2 points for every cadet who joins or renews,
 #' giving equal weighting to both recruiting and retention. The `focus_area` variable can be used to
 #' change this.
 #'
@@ -12,10 +12,10 @@
 #' and standard deviation of 1.
 #' @param som_report A data.table containing the Squadron of Merit Listing data.
 #' @param focus_area The focus area for scoring, which defaults to "balanced".
-#' @return A data.table containing the unit charter number and the growth metric.
+#' @return A data.table containing the unit charter number and the growth score.
 #' @export
 
-calculate_growth_metric <- function(som_report, focus_area = "balanced") {
+calculate_growth_score <- function(som_report, focus_area = "balanced") {
     result <- som_report[j = list(RWU, NewCdt, TotalRenewed)]
     if (focus_area == "recruiting") {
         print("Using recruiting weights")
@@ -27,8 +27,8 @@ calculate_growth_metric <- function(som_report, focus_area = "balanced") {
         print("Using balanced weights")
         weights <- c(2, 2)
     }
-    result[j = growth_metric := scale(NewCdt * weights[1] + TotalRenewed * weights[2]) + 1]
-    result <- result[j = list(RWU, growth_metric)]
+    result[j = growth_score := scale(NewCdt * weights[1] + TotalRenewed * weights[2]) + 1]
+    result <- result[j = list(RWU, growth_score)]
     result[]
     return(result)
 }
