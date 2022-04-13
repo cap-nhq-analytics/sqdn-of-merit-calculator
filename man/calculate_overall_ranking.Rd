@@ -18,7 +18,8 @@ calculate_overall_ranking(
 \item{achv_award_weights}{Weights for the major cadet awards, from Wright Brothers to Spaatz.}
 }
 \value{
-A data.table containing unit charter number, the component scores, and the overall score.
+A data.table containing unit charter number, the component scores and rankings,
+and the overall ranking.
 }
 \description{
 Calculate the overall ranking for all units in a Squadron of Merit Listing.

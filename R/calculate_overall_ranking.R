@@ -10,7 +10,8 @@
 #' @param som_report_path A path to the Squadron of Merit Listing report in CSV format.
 #' @param growth_focus_area The focus area for growth scoring, which defaults to "balanced".
 #' @param achv_award_weights Weights for the major cadet awards, from Wright Brothers to Spaatz.
-#' @return A data.table containing unit charter number, the component scores, and the overall score.
+#' @return A data.table containing unit charter number, the component scores and rankings,
+#' and the overall ranking.
 #' @export
 
 calculate_overall_ranking <- function(
