@@ -93,7 +93,8 @@ methods available to combine the scores into a final result: the
     on. In all cases involving ranking, the algorithm assigns ties the
     same rank, and then assigns the next lowest value to the rank that
     it would have received if there was no tie. For instance, the values
-    of 2, 3, 3, 3, 6 would be ranked as 1, 2, 2, 2, 5.
+    of 2, 3, 3, 3, 6 would be ranked as 1, 2, 2, 2, 5. This is sometimes
+    known as “Standard Competition Ranking” (SCR).
 
 # Limitations
 
